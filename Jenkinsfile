@@ -40,6 +40,12 @@ pipeline {
       }
     }
 
+    stage('print message') {
+      steps {
+        sh 'echo "Pipeline complete!"'
+      }
+    }
+
   }
   tools {
     maven 'Maven 3.6.3'
