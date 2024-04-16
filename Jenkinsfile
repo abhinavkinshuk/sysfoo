@@ -33,7 +33,7 @@ pipeline {
 
         stage('Test Echo 2') {
           steps {
-            sh 'sh \'echo "world"\''
+            sh 'echo "world"'
           }
         }
 
