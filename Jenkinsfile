@@ -19,9 +19,9 @@ pipeline {
       parallel {
         stage('package') {
           steps {
+            archiveArtifacts 'target/*.war'
             echo 'generating artifacts...'
             sh 'mvn package -DskipTests'
-            archiveArtifacts 'target/*.war'
           }
         }
 
